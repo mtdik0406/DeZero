@@ -6,7 +6,14 @@ class Function:
         x = input.data
         y = self.forword(x)
         output = Variable(y)
+        
+        # 入力された変数を覚える
+        self.input = input
+        
         return output
 
     def forword(self, x):
+        raise NotImplementedError()
+
+    def backward(self, gy):
         raise NotImplementedError()

@@ -1,10 +1,11 @@
 from scripts.Function import Function
+import numpy as np
 
-class Square(Function):
+class Exp(Function):
     def forword(self, x):
-        return x ** 2
+        return np.exp(x)
     
     def backward(self, gy):
         x = self.input.data
-        gx = 2 * x * gy
+        gx = np.exp(x) * gy
         return gx
