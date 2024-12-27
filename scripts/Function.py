@@ -7,8 +7,9 @@ class Function:
         y = self.forword(x)
         output = Variable(y)
         
-        # 入力された変数を覚える
+        output.set_creator(self)
         self.input = input
+        self.output = output
         
         return output
 
